@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Discover Bulgaria</title>
+  <style>
+    :root {
+      --bg-color: #fff;
+      --text-color: #222;
+      --header-color: #d62612;
+      --accent-color: #005caa;
+      --card-bg: #f0f0f0;
+    }
+
+    body.dark {
+      --bg-color: #121212;
+      --text-color: #f0f0f0;
+      --header-color: #801515;
+      --accent-color: #66ccff;
+      --card-bg: #1e1e1e;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      background: linear-gradient(to right, var(--header-color), #c21807);
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    nav {
+      background: var(--accent-color);
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    h1, h2 {
+      margin: 10px 0;
+    }
+
+    section {
+      margin: 40px auto;
+      padding: 20px;
+      max-width: 900px;
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: background 0.3s;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 12px;
+    }
+
+    .dish-img {
+      width: 250px;
+      margin: 10px 0;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 350px;
+      border: none;
+      border-radius: 12px;
+    }
+
+    .video {
+      margin: 20px auto;
+    }
+
+    .toggle-btn {
+      padding: 10px 20px;
+      background-color: var(--accent-color);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+
+    details summary {
+      cursor: pointer;
+      font-weight: bold;
+      color: var(--accent-color);
+    }
+
+    details[open] summary {
+      color: var(--header-color);
+    }
+
+    .dark-toggle {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      background-color: var(--accent-color);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <button class="dark-toggle" onclick="toggleDarkMode()">🌓</button>
+
+  <header>
+    <h1>🇧🇬 Discover Bulgaria 🇧🇬</h1>
+    <p>A colorful journey through food, culture, and tradition</p>
+  </header>
+
+  <nav>
+    <a href="#facts">Facts</a>
+    <a href="#map">Map</a>
+    <a href="#dishes">Dishes</a>
+    <a href="#music">Music</a>
+    <a href="#language">Language</a>
+  </nav>
+
+  <section id="facts">
+    <h2>🌍 Quick Facts</h2>
+    <ul>
+      <li><strong>Capital:</strong> Sofia</li>
+      <li><strong>Language:</strong> Bulgarian</li>
+      <li><strong>Currency:</strong> Bulgarian Lev (BGN)</li>
+      <li><strong>Population:</strong> Around 6.5 million</li>
+      <li><strong>Famous for:</strong> Yogurt, roses, folklore, mountains</li>
+    </ul>
+  </section>
+
+  <section id="map">
+    <h2>📍 Where is Bulgaria?</h2>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4717409.49696386!2d22.1320785!3d42.7338835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa8531cb49c69f%3A0x3a8922db14a5263d!2sBulgaria!5e0!3m2!1sen!2sbg!4v1624876528354!5m2!1sen!2sbg">
+    </iframe>
+  </section>
+
+  <section id="dishes">
+    <h2>🍽️ Bulgarian Dishes</h2>
+
+    <details>
+      <summary>Banitsa</summary>
+      <img class="dish-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Banitsa_with_cheese.jpg/640px-Banitsa_with_cheese.jpg" alt="Banitsa">
+      <p>A traditional pastry with cheese and eggs in filo dough.</p>
+    </details>
+
+    <details>
+      <summary>Shopska Salad</summary>
+      <img class="dish-img" src="https://upload.wikimedia.org/wikipedia/commons/6/68/Shopska_salad_2.jpg" alt="Shopska salad">
+      <p>Fresh salad with tomatoes, cucumbers, onions, and grated white cheese.</p>
+    </details>
+
+    <details>
+      <summary>Lyutenitsa</summary>
+      <img class="dish-img" src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Lyutenitsa.jpg" alt="Lyutenitsa">
+      <p>Spicy vegetable spread with tomatoes, peppers, and eggplant.</p>
+    </details>
+  </section>
+
+  <section id="music">
+    <h2>🎶 Bulgarian Folk Music</h2>
+    <div class="video">
+      <iframe 
+        src="https://www.youtube.com/embed/VpjJ0g-TQeA" 
+        title="Bulgarian Folk Song" 
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div class="video">
+      <iframe 
+        src="https://www.youtube.com/embed/qzVBqBosf5w" 
+        title="Valya Balkanska - Izlel e Delyo Haydutin" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <section id="language">
+    <h2>📝 Practice Bulgarian</h2>
+    <p><strong>Здравей! Как си?</strong> – Hello! How are you?</p>
+    <p><strong>Казвам се Мирaд.</strong> – My name is Mirad.</p>
+    <p><strong>Обичам България!</strong> – I love Bulgaria!</p>
+    <p><strong>До скоро!</strong> – See you soon!</p>
+  </section>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
+
+</body>
+</html>
